@@ -11,12 +11,12 @@ public class SeleniumTest {
 
         //1- Setting up the web driver manager
         WebDriverManager.chromedriver().setup();
-        ChromeOptions options = new ChromeOptions();
+        // ChromeOptions options = new ChromeOptions();
 
-        options.addArguments("lang=en-GB");
+        //options.addArguments("lang=en-GB");
 
         //2- Create instance of the chrome driver
-        WebDriver driver = new ChromeDriver(options);
+        WebDriver driver = new ChromeDriver(); // options
         driver.manage().window().maximize();
 
         //3- Test if driver is working

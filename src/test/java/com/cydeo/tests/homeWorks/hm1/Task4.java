@@ -1,24 +1,23 @@
-package com.cydeo.tests.homeWorks;
+package com.cydeo.tests.homeWorks.hm1;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 
-public class Task2 {
+public class Task4 {
     public static void main(String[] args) {
         WebDriverManager.chromedriver().setup();
         WebDriver driver = new ChromeDriver();
         driver.manage().window().maximize();
 
-        driver.get("http://zero.webappsecurity.com/login.html");
+        driver.get("https://practice.cydeo.com/inputs");
 
-        String expected = "Log in to ZeroBank";
-        String actual = driver.getTitle();
+        driver.findElement(By.partialLinkText("Home")).click();
 
-        if (expected.equals(actual)){
+        if (driver.getTitle().equals("Practice")){
             System.out.println("Passed");
-        } else{
+        } else {
             System.out.println("Failed");
         }
     }

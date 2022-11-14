@@ -1,4 +1,4 @@
-package com.cydeo.tests.homeWorks;
+package com.cydeo.tests.homeWorks.hm1;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
 import org.openqa.selenium.By;
